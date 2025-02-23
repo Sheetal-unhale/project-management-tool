@@ -1,0 +1,235 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Customization */
+.navbar-custom {
+  background-color: #343a40 !important; /* Dark theme */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* Navbar Brand */
+.navbar-brand-custom {
+  font-size: 22px;
+  font-weight: bold;
+  color: white !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Navbar Links */
+.nav-link-custom {
+  color: white !important;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #17a2b8 !important; /* Bootstrap Primary Color */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-custom {
+    padding: 5px 0;
+  }
+
+  .navbar-brand-custom {
+    font-size: 20px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-link-custom {
+    padding: 10px;
+  }
+}
+
+/* Page Content */
+.page-content {
+  margin-top: 70px; /* Prevents overlap with navbar */
+  padding: 20px;
+}
+
+/* Home Page */
+.home-container {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(to right, #007bff, #6610f2);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-container p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  opacity: 0.9;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Custom Primary Button */
+.btn-primary-custom {
+  background-color: #bb9115 !important;
+  border: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: #9c853e !important;
+}
+
+/* Project Form */
+.project-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+.project-form label {
+  font-weight: bold;
+}
+
+.project-form button {
+  background-color: #28a745;
+  border: none;
+  transition: background 0.3s;
+}
+
+.project-form button:hover {
+  background-color: #218838;
+}
+
+/* Project List */
+.project-list {
+  margin-top: 30px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.project-card p {
+  color: #666;
+}
+
+/* Improved Dashboard Styling */
+.dashboard-container {
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding-top: 52px;
+  margin: 20px;
+}
+
+/* Dashboard Card */
+.dashboard-card {
+  background: rgb(184, 131, 131);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.02) translateY(-2px);
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Dashboard Subtitle */
+.dashboard-subtitle {
+  text-align: center;
+  color: #d0e77b;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+
+  .dashboard-card {
+    padding: 30px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .home-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.8rem;
+  }
+
+  .project-form {
+    max-width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
