@@ -17,7 +17,7 @@ const Dashboard = () => {
                 <h2 className="dashboard-title">Dashboard</h2>
                 <p className="dashboard-subtitle">Manage your projects efficiently</p>
                 <ProjectForm addProject={addProject} />
-                <ProjectList projects={projects} deleteProject={deleteProject} />
+                {/* <ProjectList projects={projects} deleteProject={deleteProject} /> */}
               </Card.Body>
             </Card>
           </Col>

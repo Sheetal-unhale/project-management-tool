@@ -53,10 +53,32 @@ app.post("/projects", async (req, res) => {
 // API: Delete a Project
 app.delete("/projects/:id", async (req, res) => {
   try {
+    const deletedProject =
     await Project.findByIdAndDelete(req.params.id);
+    if (!deletedProject) {
+      return res.status(404).json({ message: "Project not found" });
+    }
     res.json({ message: "Project deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: "Error deleting project" });
+  }
+});
+   // API: Update a Project
+   app.put("/projects/:id", async (req, res) => {
+  try {
+    const { title, description, status } = req.body;
+    const updatedProject = await Project.findByIdAndUpdate(
+      req.params.id,
+      { title, description, status },
+      { new: true }
+    );
+    if (!updatedProject) {
+      return res.status(404).json({ message: "Project not found" });
+    }
+    res.json(updatedProject);
+  } catch (error) {
+    console.error("error updating project:", error);
+    res.status(500).json({ message: "Error updating project" });
   }
 });
 
